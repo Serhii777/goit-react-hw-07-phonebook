@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import store from "../../redux/store";
 
 import styles from "./ContactForm.module.css";
 
@@ -21,9 +20,9 @@ class ContactForm extends Component {
     e.preventDefault();
 
     const newContact = this.state;
-    const { contactList } = store.getState();
+    const { contacts } = this.props;
 
-    let newContactUnique = contactList.find(
+    let newContactUnique = contacts.find(
       ({ name }) => name === newContact.name
     );
 
@@ -39,6 +38,7 @@ class ContactForm extends Component {
     };
 
     isContactExist();
+
     this.setState({ name: "", number: "" });
   };
 

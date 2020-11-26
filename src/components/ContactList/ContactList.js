@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ContactListItem from "./ContactListItem";
+
+import ContactListItem from "./ContactListItemContainer";
 
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import styles from "./ContactList.module.css";
@@ -33,3 +34,4 @@ ContactList.propTypes = {
 };
 
 export default ContactList;
+

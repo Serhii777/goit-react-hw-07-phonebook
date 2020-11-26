@@ -1,13 +1,9 @@
 import { connect } from "react-redux";
 import Filter from "./Filter";
-import contactActions from "../../redux/contact/contactActions";
-
-const mapStateToProps = (state) => ({
-  contacts: state.filter,
-});
+import contactActions from "../../redux/contacts/contactsActions";
 
 const mapDispatchToProps = {
   onChangeFilter: contactActions.changeFilter,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Filter);
+export default connect(null, mapDispatchToProps)(Filter);

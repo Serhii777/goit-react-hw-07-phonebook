@@ -1,14 +1,10 @@
-import { createStore } from "redux";
-// import { configureStore } from "@reduxjs/toolkit";
-import contactReducer from "./contact/contactReducer";
-import { onLoadFromLocalStorage } from "../utils/localStorage";
+import { configureStore } from "@reduxjs/toolkit";
+import contactsReducer from "./contacts/contactsReducer";
 
-const persistedState = onLoadFromLocalStorage() || {};
-
-const store = createStore(
-  contactReducer,
-  persistedState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const store = configureStore({
+  reducer: {
+    contacts: contactsReducer,
+  },
+});
 
 export default store;

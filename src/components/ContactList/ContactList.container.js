@@ -1,17 +1,9 @@
 import { connect } from "react-redux";
 import ContactList from "./ContactList";
+import contactsSelectors from "../../redux/contacts/contactsSelectors";
 
-const mapStateToProps = (state) => {
-  const { contactList, filter } = state;
-  const normalizedFilter = filter.toLowerCase();
+const mapStateToProps = (state) => ({
+  contacts: contactsSelectors.getVisibleContacts(state),
+});
 
-  const visibleContacts = contactList.filter(({ name }) =>
-    name.toLowerCase().includes(normalizedFilter)
-  );
-
-  return {
-    contacts: visibleContacts,
-  };
-};
-
-export default connect(mapStateToProps)(ContactList);
+export default connect(mapStateToProps, null)(ContactList);

@@ -1,3 +1,34 @@
 {
-  "contacts": []
+  "contacts": [
+    {
+      "name": "Наливайченковик Імануїл",
+      "number": "456-89-78",
+      "id": 9
+    },
+    {
+      "name": "Selectors",
+      "number": "123-45-69",
+      "id": 10
+    },
+    {
+      "name": "Thunk",
+      "number": "777-77-77",
+      "id": 12
+    },
+    {
+      "name": "react",
+      "number": "444-55-32",
+      "id": 13
+    },
+    {
+      "name": "HTML",
+      "number": "345437",
+      "id": 14
+    },
+    {
+      "name": "Hello world",
+      "number": "345",
+      "id": 16
+    }
+  ]
 }

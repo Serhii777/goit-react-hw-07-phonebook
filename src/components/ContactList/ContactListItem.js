@@ -1,7 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import contactActions from "../../redux/contact/contactActions";
 
 import styles from "./ContactList.module.css";
 
@@ -30,17 +28,4 @@ ContactListItem.defaultProps = {
   number: "",
 };
 
-const mapStateToProps = (state, ownProps) => {
-  const contactListItem = state.contactList.find(
-    (contact) => contact.id === ownProps.id
-  );
-  return {
-    ...contactListItem,
-  };
-};
-
-const mapDispatchToProps = (dispatch, ownProps) => ({
-  onRemoveContact: () => dispatch(contactActions.removeContact(ownProps.id)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(ContactListItem);
+export default ContactListItem;

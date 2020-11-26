@@ -1,15 +1,17 @@
 import { connect } from "react-redux";
 import ContactForm from "./ContactForm";
-import contactActions from "../../redux/contact/contactActions";
+import contactActions from "../../redux/contacts/contactsActions";
+import contactsOperations from "../../redux/contacts/contactsOperations";
+import contactsSelectors from "../../redux/contacts/contactsSelectors";
 
 const mapStateToProps = (state) => {
   return {
-    contacts: state.contacts,
+    contacts: contactsSelectors.getContacts(state),
   };
 };
 
 const mapDispatchToProps = {
-  onAddContact: contactActions.addContact,
+  onAddContact: contactsOperations.addContact,
   onIsNewContactUnique: contactActions.isNewContactUnique,
 };
 export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);
