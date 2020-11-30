@@ -21,6 +21,7 @@ const ContactListItem = ({ name, number, onRemoveContact }) => {
 ContactListItem.propTypes = {
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
+  onRemoveContact: PropTypes.func,
 };
 
 ContactListItem.defaultProps = {

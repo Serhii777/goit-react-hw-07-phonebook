@@ -10,6 +10,7 @@ const defaultContactList = [
 ];
 
 const addContact = (state, action) => {
+  console.log(action);
   return [...state, action.payload];
 };
 

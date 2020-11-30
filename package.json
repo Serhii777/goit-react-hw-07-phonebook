@@ -10,10 +10,12 @@
     "axios": "^0.21.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-loader-spinner": "^3.1.14",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.1",
     "react-transition-group": "^4.4.1",
     "redux": "^4.0.5",
+    "uuid": "^8.3.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -21,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server -p 2990 -d 250 -w db.json",
+    "server": "json-server -p 4000 -d 200 -w db.json",
     "predeploy": "npm run build",
     "deploy": "netlify deploy -p"
   },

@@ -16,7 +16,9 @@ const Alert = ({ newContactUnique, timeout }) => {
 };
 
 Alert.propTypes = {
-  newContactUnique: (PropTypes.bool, PropTypes.object),
+  newContactUnique: (PropTypes.string, PropTypes.bool ),
+  // newContactUnique: (PropTypes.bool, PropTypes.string ),
+  // newContactUnique: (PropTypes.bool),
 };
 
 Alert.defaultProps = {

@@ -7,6 +7,7 @@ import Filter from "./Filter/Filter.container";
 import ContactForm from "./ContactForm/ContactForm.container";
 import ContactList from "./ContactList/ContactList.container";
 import Alert from "./Alert/Alert";
+import Spiner from "./Spinner";
 
 import styles from "./Container/Container.module.css";
 import { CSSTransition } from "react-transition-group";
@@ -20,7 +21,8 @@ const App = ({
 }) => {
   return (
     <Container>
-      {loadingContacts && <h2>Loading...</h2>}
+      {loadingContacts && <Spiner />}
+      {/* {loadingContacts && <h2>Loading...</h2>} */}
       <MainTitle />
       <ContactForm />
 
@@ -53,7 +55,10 @@ const App = ({
 
 App.propTypes = {
   contacts: PropTypes.arrayOf(PropTypes.object),
-  newContactUnique: (PropTypes.bool, PropTypes.object),
+  newContactUnique: (PropTypes.bool, PropTypes.object, PropTypes.string),
+  // newContactUnique: (PropTypes.bool),
+  onResetNewContactUnique: PropTypes.func,
+
 };
 
 App.defaultProps = {
