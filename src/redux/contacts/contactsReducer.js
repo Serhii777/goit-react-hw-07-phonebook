@@ -9,14 +9,10 @@ const defaultContactList = [
   { id: "id-4", name: "Annie Copeland", number: "227-91-26" },
 ];
 
-const addContact = (state, action) => {
-  console.log(action);
-  return [...state, action.payload];
-};
+const addContact = (state, action) => [...state, action.payload];
 
-const removeContact = (state, action) => {
-  return state.filter(({ id }) => id !== action.payload);
-};
+const removeContact = (state, action) =>
+  state.filter(({ id }) => id !== action.payload);
 
 const contactList = createReducer(defaultContactList, {
   [contactsActions.fetchContactsSuccess]: (state, action) => action.payload,

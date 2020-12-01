@@ -22,7 +22,6 @@ const App = ({
   return (
     <Container>
       {loadingContacts && <Spiner />}
-      {/* {loadingContacts && <h2>Loading...</h2>} */}
       <MainTitle />
       <ContactForm />
 
@@ -56,7 +55,6 @@ const App = ({
 App.propTypes = {
   contacts: PropTypes.arrayOf(PropTypes.object),
   newContactUnique: (PropTypes.bool, PropTypes.object, PropTypes.string),
-  // newContactUnique: (PropTypes.bool),
   onResetNewContactUnique: PropTypes.func,
 
 };

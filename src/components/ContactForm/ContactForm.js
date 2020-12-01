@@ -82,9 +82,7 @@ ContactForm.propTypes = {
   contacts: PropTypes.arrayOf(PropTypes.object),
   name: PropTypes.string,
   number: PropTypes.string,
-  // newContactUnique: (PropTypes.bool, PropTypes.object),
   newContactUnique: (PropTypes.object, PropTypes.bool ),
-  // newContactUnique: (PropTypes.bool),
   onAddContact: PropTypes.func,
   onIsNewContactUnique: PropTypes.func,
 };
